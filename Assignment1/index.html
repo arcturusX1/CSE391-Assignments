@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Assignment 1 - Yasir Mahbub</title>
 </head>
 <body>
@@ -10,13 +11,14 @@
     <h1 id="name">Yasir Mahbub</h1>
     <!-- links -->
     <div id="links">
-        <h3>Links
-            <a href="#personalInfo" class="link" id="internalLink">Personal Info</a>
-            <a href="#hobbies" class="link" id="internalLink">Hobbies</a>
-            <a href="#quote">Favorite quote</a>
-            <a href="#hobbies">Hobbies</a>
-            <a href="#music">Favorite music acts</a>
-        </h3>
+        <div id="sectionTitle">
+            <h3>Links</h3>
+        </div>
+        <a href="#personalInfo">Personal Info</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#quote">Favorite quote</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#listMusic">Favorite bands</a>
     </div>
     <!-- personal info -->
     <div class= "personalInfo" id="personalInfo">
@@ -28,11 +30,13 @@
             </p>
         </div>
         <!-- quote -->
-        <div id="sectionTitle">
-            <h3 id="quote">Favorite quote</h3>
+        <div id="quote">
+            <div id="sectionTitle">
+                <h3>Favorite quote</h3>
+            </div>
+                <p id="quoteText">“There are only two kinds of programming languages: the ones people complain about and the ones nobody uses”</p>
+                <p id="quoteAuthor"> <i>- Bjarne Stroustrup, creator of C++</i></p>
         </div>
-            <p id="quote">“There are only two kinds of programming languages: the ones people complain about and the ones nobody uses”</p>
-            <p id="quoteAuthor"> <i>- Bjarne Stroustrup, creator of C++</i></p>
         <!-- hobbies -->
         <div id="hobbies">
             <div id="sectionTitle">
@@ -47,27 +51,28 @@
         </div>
         
         <!-- link to the table and list later -->
-        <div id="sectionTitle">
-            <h3 id="music">Favorite music acts</h3>
-        </div>
-            <div id="listMusic">
-                <ol>
-                    <li1><b>Opeth</b></li1>
-                    <ul><li>Favorite Album: Ghost Reveries</li></ul>
-                    <li2><b>Tool</b></li2>
-                    <ul><li>Favorite Album: 10,000 Days</li></ul>
-                    <li3><b>Daft Punk</b></li3>
-                    <ul><li>Favorite Album: Discovery</li></ul>
-                    <li4><b>Tame Impala</b></li4>
-                    <ul><li>Favorite Album: Currents</li></ul>
-                    <li5><b>Justice</b></li5>
-                    <ul><li>Favorite Album: Woman</li></ul>
-                </ol>
-            </div>
-            
-            <!-- movies -->
+        <div id="listMusic">
             <div id="sectionTitle">
-                <h3 id="movies">Favorite movies tables</h>
+                <h3>Favorite bands</h3>
+            </div>    
+            <ol>
+                <li1><b>Opeth</b></li1>
+                <ul><li>Favorite Album: Ghost Reveries</li></ul>
+                <li2><b>Tool</b></li2>
+                <ul><li>Favorite Album: 10,000 Days</li></ul>
+                <li3><b>Daft Punk</b></li3>
+                <ul><li>Favorite Album: Discovery</li></ul>
+                <li4><b>Tame Impala</b></li4>
+                <ul><li>Favorite Album: Currents</li></ul>
+                <li5><b>Justice</b></li5>
+                <ul><li>Favorite Album: Woman</li></ul>
+            </ol>
+        </div>
+            
+        <!-- movies -->
+        <div id="movies">
+            <div id="sectionTitle">
+                <h3>Favorite movies tables</h3>
             </div>
             <div id="tableMovies">
                 <table>
@@ -109,14 +114,19 @@
                     </tr>
                 </table>
             </div>
-            
-            <!-- images -->
-            <h3 id="sectionTitle">Images</h3>
-            <div id="image">
-                <img src="IMG_20221019_224527127.jpg" alt="Nacho the cat" id="internal" text="Nacho!">
-                <img src="" alt="" id="external">
-            </div>
         </div>
+        
+        <!-- images -->
+        <div id="images">
+            <div id="sectionTitle">
+                <h3>Images</h3>
+            </div>
+                <div id="image">
+                    <img src="IMG_20221019_224527127.jpg" alt="Nacho the cat" id="internal" text="Nacho!">
+                    <img src="" alt="" id="external">
+                </div>
+            </div>
+    </div>
     <div id="favLinks">
 
     </div>
