@@ -1,3 +1,12 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #C8ACD6;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -127,30 +136,16 @@ ol>li {
 }
 
 /* Table Styling */
-/* General Table Styles */
-#tableMovies {
-  width: 100%;
-  margin: 20px 0;
-  border-radius: 10px;
-  /* Rounded corners for the table */
-  overflow: hidden;
-  /* Ensures the corners are rounded for child elements */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* Drop shadow */
-  background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
-  /* Subtle gradient */
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
+  margin: 20px 0;
 }
 
 table,
 td,
 th {
-  border: 1px solid rgba(200, 172, 214, 0.5);
-  /* Lighter border */
+  border: 1px solid #C8ACD6;
 }
 
 th,
@@ -159,63 +154,11 @@ td {
   text-align: center;
   font-size: 0.9rem;
   color: #C8ACD6;
-  background: transparent;
-  /* Ensure cell backgrounds are transparent to see the gradient */
 }
 
-/* Header Row Styles */
-tr.rows1 {
-  background-color: rgba(200, 172, 214, 0.8);
-  /* Header background color */
-  color: #fff;
-  /* Header text color */
+tr:nth-child(even) {
+  background-color: #2E236C;
 }
-
-/* Image Container Styles */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 100px;
-  /* Limit width of images */
-  margin: 0 auto;
-  /* Center images */
-}
-
-.image {
-  width: 100%;
-  border-radius: 5px;
-  /* Slightly rounded corners for images */
-}
-
-/* Overlay Styles */
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  /* Semi-transparent background */
-  color: white;
-  padding: 5px;
-  text-align: center;
-  font-size: 0.8rem;
-  /* Smaller font for overlay */
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  /* Initially hidden */
-}
-
-.container:hover .overlay {
-  opacity: 1;
-  /* Show overlay on hover */
-}
-
-/* Optional: Add hover effect for rows */
-tr:hover {
-  background-color: rgba(200, 172, 214, 0.2);
-  /* Light hover effect */
-}
-
 
 /* Image Section */
 #images img {
@@ -276,40 +219,37 @@ tr:hover {
 /* Container needed to position the overlay. Adjust the width as needed */
 .container {
   position: relative;
-  height: auto;
-  /* Use auto or a specific value */
-  width: auto;
-  /* Use auto or a specific value */
+  height: relative;
+  width: relative;
   max-width: 300px;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.8);
-  /* Black see-through */
-  color: white;
-  width: 100%;
-  transition: .2s ease;
-  opacity: 0;
-  font-size: 4%;
-  /* Adjust this percentage as needed */
-  padding: 0px;
-  text-align: center;
-  max-width: 100%;
-  /* Ensure it doesn't exceed container width */
-}
-
-/* When you mouse over the container, fade in the overlay title */
-.container:hover .overlay {
-  opacity: 1;
 }
 
 .image {
   display: inline-flex;
   width: 100%;
   height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.8);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .2s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
 }
 
 #linksContainer {
