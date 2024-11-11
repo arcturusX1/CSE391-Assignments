@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     color: #17153B;
-    background-color: #C8ACD6;
+    background-color: #a488b3;
     margin: 0;
     padding: 0;
   }
@@ -14,13 +14,26 @@ body {
     margin-bottom: 20px;
     text-align: center;
     color: #2E236C;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
   }
   
   /* Links section */
   #links {
     background-color: #433D8B;
     padding: 20px;
+    margin: 0 50px 0 50px;
     text-align: center;
+  }
+  
+  #sectionTitle{
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
   }
   
   #links a {
@@ -33,12 +46,15 @@ body {
   }
   
   #links a:hover {
-    color: #17153B;
+    color: #06060e;
   }
   
   /* Personal info section */
   .personalInfo {
-    padding: 40px;
+    margin: 50px;
+    padding: 70px;
+    background-color: #433D8B;
+
   }
   
   .personalInfo #blurb {
@@ -51,6 +67,11 @@ body {
     font-style: italic;
     color: #2E236C;
     margin-bottom: 30px;
+  }
+  .personalInfo #quoteAuthor{
+    margin: auto;
+    text-align: right;
+    padding: 0 20px;
   }
   
   /* Hobbies section */
