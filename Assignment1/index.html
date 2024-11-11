@@ -8,18 +8,23 @@
 </head>
 <body>
     <!-- name -->
-    <h1 id="name">Yasir Mahbub</h1>
-    <!-- links -->
-    <div id="links">
-        <div id="sectionTitle">
-            <h3>Links</h3>
-        </div>
-        <a href="#personalInfo">Personal Info</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#quote">Favorite quote</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#listMusic">Favorite bands</a>
-    </div>
+    <header>
+        <!-- Name -->
+        <h1 id="name">Yasir Mahbub</h1>
+        <!-- Navbar -->
+        <nav id="navbar">
+            <div class="sectionTitle" id="linkTitle">
+                <h3>Links</h3>
+            </div>
+            <div id="links">
+                <a href="#personalInfo">Personal Info</a>
+                <a href="#hobbiesTitle">Hobbies</a>
+                <a href="#quoteTitle">Favorite Quote</a>
+                <a href="#musicTitle">Favorite Bands</a>
+                <a href="#moviesTitle">Favorite Movies</a>
+            </div>
+        </nav>
+    </header>
     <!-- personal info -->
     <div class= "personalInfo" id="personalInfo">
         <div id="blurb">
@@ -30,18 +35,18 @@
             </p>
         </div>
         <!-- quote -->
+        <div class="sectionTitle" id="quoteTitle">
+            <h3>Favorite quote</h3>
+        </div>
         <div id="quote">
-            <div id="sectionTitle">
-                <h3>Favorite quote</h3>
-            </div>
                 <p id="quoteText">“There are only two kinds of programming languages: the ones people complain about and the ones nobody uses”</p>
                 <p id="quoteAuthor"> <i>- Bjarne Stroustrup, creator of C++</i></p>
         </div>
         <!-- hobbies -->
+        <div class="sectionTitle" id="hobbiesTitle">
+            <h3>Hobbies</h3>
+        </div>
         <div id="hobbies">
-            <div id="sectionTitle">
-                <h3>Hobbies</h3>
-            </div>
             <ul>
                 <li class="item1">Playing guitar</li>
                 <li class="item2">Listening to music</li>
@@ -51,10 +56,10 @@
         </div>
         
         <!-- link to the table and list later -->
+        <div class="sectionTitle" id="musicTitle">
+            <h3>Favorite bands</h3>
+        </div>    
         <div id="listMusic">
-            <div id="sectionTitle">
-                <h3>Favorite bands</h3>
-            </div>    
             <ol>
                 <li1><b>Opeth</b></li1>
                 <ul><li>Favorite Album: Ghost Reveries</li></ul>
@@ -70,10 +75,10 @@
         </div>
             
         <!-- movies -->
+        <div class="sectionTitle" id="moviesTitle">
+            <h3>Favorite movies</h3>
+        </div>
         <div id="movies">
-            <div id="sectionTitle">
-                <h3>Favorite movies tables</h3>
-            </div>
             <div id="tableMovies">
                 <table>
                     <tr class="rows1">
@@ -83,53 +88,72 @@
                         <td class="columns4">Short Review</td>
                     </tr>
                     <tr class="rows2">
-                        <td class="columns1">Movie1</td>
-                        <td class="columns2">Movie1</td>
-                        <td class="columns3">Movie1</td>
-                        <td class="columns4">Movie1</td>
+                        <td class="columns1">
+                            <div class="container">
+                                <img src="https://m.media-amazon.com/images/I/517iEyAyR8L._AC_UF894,1000_QL80_.jpg" alt="Django Unchained" class="image">
+                                <div class="overlay">Goodfellas</div>
+                            </div>
+                        </td>
+                        <td class="columns2">1990</td>
+                        <td class="columns3">Martin Scorsese</td>
+                        <td class="columns4">Thrilling look into the mobster life. Scorsese at his peak with brilliant cinematography and score</td>
                     </tr>
                     <tr class="rows3">
-                        <td class="columns1">Movie2</td>
-                        <td class="columns2">Movie2</td>
-                        <td class="columns3">Movie2</td>
-                        <td class="columns4">Movie2</td>
+                        <td class="columns1">
+                            <div class="container">
+                                <img src="https://ew.com/thmb/K0r_HTo6_hHJG_xBLCebxux_lT4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/django-poster_510-71504b1775e5459c8787e9a31001d867.jpg" alt="Django Unchained" class="image">
+                                <div class="overlay">Django Unchained</div>
+                            </div>
+                        </td>
+                        <td class="columns2">2012</td>
+                        <td class="columns3">Quentin Tarantino</td>
+                        <td class="columns4">Triumph of a free man against the slavery rule. Potrayed as a revenge story with brilliant performances</td>
                     </tr>
                     <tr class="rows4">
-                        <td class="columns1">Movie3</td>
-                        <td class="columns2">Movie3</td>
-                        <td class="columns3">Movie3</td>
-                        <td class="columns4">Movie3</td>
-                    </tr>
-                    <tr class="rows5">
-                        <td class="columns1">Movie4</td>
-                        <td class="columns2">Movie4</td>
-                        <td class="columns3">Movie4</td>
-                        <td class="columns4">Movie4</td>
-                    </tr>
-                    <tr class="rows6">
-                        <td class="columns1">Movie5</td>
-                        <td class="columns2">Movie5</td>
-                        <td class="columns3">Movie5</td>
-                        <td class="columns4">Movie5</td>
+                        <td class="columns1">
+                            <div class="container">
+                                <img src="https://m.media-amazon.com/images/I/61qqTuTHxaL._AC_UF894,1000_QL80_.jpg" alt="Arrival" class="image">
+                                <div class="overlay">Arrival</div>
+                            </div>
+                        </td>
+                        <td class="columns2">2016</td>
+                        <td class="columns3">Dennis Villeneuve</td>
+                        <td class="columns4">A slowburn sci-fi tale that potrays the curiosity and ingenuity of mankind in the face of adversity</td>
                     </tr>
                 </table>
             </div>
         </div>
         
         <!-- images -->
+        <div class="sectionTitle" id="imagesTitle">
+            <h3>Images</h3>
+        </div>
         <div id="images">
-            <div id="sectionTitle">
-                <h3>Images</h3>
-            </div>
                 <div id="image">
                     <img src="IMG_20221019_224527127.jpg" alt="Nacho the cat" id="internal" text="Nacho!">
                     <img src="" alt="" id="external">
                 </div>
             </div>
+        <!-- links -->
+        <div id="linksTitle" class="sectionTitle" >
+            <h3>Links</h3>
+        </div>
+        <div id="navbar">
+            <div id="links">
+                <div class="container" id="discordLink">
+                    <a href="https://discord.gg/8ukBMGew">
+                        <img src="discord-icon-svgrepo-com.svg" alt="Arrival" class="image">
+                    </a>
+                    <div class="overlay">391 Discord</div>
+                </div>
+                <div class="container" id="discordLink">
+                    <a href="https://discord.gg/8ukBMGew">
+                        <img src="discord-icon-svgrepo-com.svg" alt="Arrival" class="image">
+                    </a>
+                    <div class="overlay">391 Discord</div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="favLinks">
-
-    </div>
-    
 </body>
 </html>
