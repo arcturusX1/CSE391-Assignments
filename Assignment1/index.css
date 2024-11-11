@@ -1,142 +1,241 @@
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    color: #17153B;
-    background-color: #a488b3;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header styles */
-  h1#name {
-    font-size: 36px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #2E236C;
-    font-family: "Jura", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  /* Links section */
-  #links {
-    background-color: #433D8B;
-    padding: 20px;
-    margin: 0 50px 0 50px;
-    text-align: center;
-  }
-  
-  #sectionTitle{
-    font-family: "Jura", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 25px;
-  }
-  
-  #links a {
-    display: inline-block;
-    color: #C8ACD6;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  #links a:hover {
-    color: #06060e;
-  }
-  
-  /* Personal info section */
-  .personalInfo {
-    margin: 50px;
-    padding: 70px;
-    background-color: #433D8B;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #C8ACD6;
+}
+html {
+  scroll-behavior: smooth;
+}
 
+/* Body Styling */
+body {
+  background-color: #17153B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header Styling */
+#name {
+  font-size: 2.5rem;
+  color: #C8ACD6;
+  text-align: center;
+  margin-bottom: px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Navbar Styling */
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Links Section Title */
+#linkTitle {
+  margin-bottom: 10px;
+}
+
+/* Links Container */
+#links {
+  display: flex; /* Align links in a row */
+  gap: 15px; /* Space between links */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+}
+
+
+/* Link Buttons */
+
+#links a {
+  text-decoration: none;
+  color: #C8ACD6;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #2E236C;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Hover Effect */
+
+#links a:hover {
+  background-color: #4E3D92; /* Lighter shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#links a:hover {
+  background-color: #433D8B;
+}
+
+
+
+/* Content Sections */
+.personalInfo {
+  max-width: 800px;
+  background-color: #2E236C;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#blurb, #quote, #hobbies, #listMusic, #movies {
+  margin: 10px 0;
+}
+
+/* Hobbies and Music List Styling */
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ol > li {
+  color: #C8ACD6;
+}
+
+ul > li, ol > li {
+  background-color: #433D8B;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+/* Music Section Styling */
+#listMusic ol > li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #C8ACD6;
+  margin-top: 10px;
+}
+
+#listMusic ul > li {
+  font-size: 1rem;
+  color: #C8ACD6;
+  margin-left: 20px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, td, th {
+  border: 1px solid #C8ACD6;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #C8ACD6;
+}
+
+tr:nth-child(even) {
+  background-color: #2E236C;
+}
+
+/* Image Section */
+#images img {
+  width: 100px;
+  height: auto;
+  margin: 5px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#images img:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+.sectionTitle{
+  font-size: 1.5rem;
+  color: #C8ACD6;
+  margin: 20px 0 5px;
+  text-align: center;
+  background-color: #2E236C;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #links a {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      flex-direction: column; /* Stack links vertically on small screens */
+      align-items: center;
+      }
   }
   
-  .personalInfo #blurb {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+  #name {
+      font-size: 2rem;
   }
   
-  .personalInfo #quote {
-    font-style: italic;
-    color: #2E236C;
-    margin-bottom: 30px;
+  .personalInfo {
+      padding: 15px;
   }
-  .personalInfo #quoteAuthor{
-    margin: auto;
-    text-align: right;
-    padding: 0 20px;
-  }
-  
-  /* Hobbies section */
-  #hobbies {
-    background-color: #433D8B;
-    color: #C8ACD6;
-    padding: 40px;
-  }
-  
-  #hobbies ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  #hobbies li {
-    margin-bottom: 10px;
-  }
-  
-  /* Favorite music section */
-  #listMusic {
-    padding: 40px;
-  }
-  
-  #listMusic ol {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  #listMusic li {
-    margin-bottom: 20px;
-  }
-  
-  #listMusic h3 {
-    color: #2E236C;
-    margin-bottom: 10px;
-  }
-  
-  /* Movies table section */
-  #movies {
-    padding: 40px;
-  }
-  
-  #tableMovies {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  #tableMovies th, #tableMovies td {
-    padding: 10px;
-    border-bottom: 1px solid #17153B;
-  }
-  
-  #tableMovies th {
-    background-color: #433D8B;
-    color: #C8ACD6;
-  }
-  
-  /* Images section */
-  #images {
-    padding: 40px;
-  }
-  
-  #image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  height: relative;
+  width: relative;
+  max-width: 300px;
+}
+.image {
+  display: inline-flex;
+  width: 100%;
+  height: auto;
+}
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.8); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .2s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+#linksContainer{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 20px 0;
+}
+#links {
+  display: flex; /* Align links in a row */
+  gap: 15px; /* Space between links */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+}
