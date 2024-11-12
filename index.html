@@ -17,19 +17,21 @@
         <!-- Name -->
         <h1 id="name">Yasir Mahbub</h1>
         <!-- Navbar -->
-        <nav id="navbar">
-            <div class="sectionTitle" id="linkTitle">
-                <h3>Links</h3>
-            </div>
-            <div id="links">
-                <a href="#personalInfo">Personal Info</a>
-                <a href="#hobbiesTitle">Hobbies</a>
-                <a href="#quoteTitle">Favorite Quote</a>
-                <a href="#musicTitle">Favorite Bands</a>
-                <a href="#moviesTitle">Favorite Movies</a>
-            </div>
-        </nav>
+        <div class="sectionTitle" id="linkTitle">
+            <h3>Links</h3>
+        </div>
     </header>
+    <!-- nav has to be outside of header for position: sticky to work -->
+    <nav id="navbar">
+        <div id="navlinks">
+            <a href="#personalInfo">Personal Info</a>
+            <a href="#hobbiesTitle">Hobbies</a>
+            <a href="#quoteTitle">Favorite Quote</a>
+            <a href="#musicTitle">Favorite Bands</a>
+            <a href="#moviesTitle">Favorite Movies</a>
+        </div>
+    </nav>  
+
     <!-- personal info -->
     <div class= "personalInfo" id="personalInfo">
         <div id="blurb">
