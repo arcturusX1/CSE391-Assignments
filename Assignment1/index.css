@@ -79,7 +79,7 @@ body {
 #navlinks a:hover {
   background-color: #4E3D92;
   /* Lighter shade on hover */
-  transform: scale(1.01);
+  transform: scale(1.05);
   /* Slightly enlarge on hover */
 }
 
