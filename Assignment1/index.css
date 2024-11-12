@@ -19,10 +19,14 @@ body {
   align-items: center;
   padding: 20px;
 }
+.ghostDiv{
+  padding: 20px 0px;
+  margin: 20px 10px;
+}
 
 /* Header Styling */
 #name {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #C8ACD6;
   text-align: center;
   margin-bottom: px;
@@ -33,7 +37,7 @@ body {
 
 #navbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin: 20px 0;
   position: sticky;
@@ -41,10 +45,6 @@ body {
   overflow: hidden;
 }
 
-/* Links Section Title */
-#linkTitle {
-  margin-bottom: 10px;
-}
 
 /* Links Container */
 #navlinks {
@@ -55,6 +55,12 @@ body {
   flex-wrap: wrap;
   /* Allow wrapping on smaller screens */
   justify-content: center;
+  background-color: #C8ACD6;
+  border-radius: 25px;
+}
+
+#navlinks:hover{
+  opacity: 1;
 }
 
 
@@ -65,12 +71,14 @@ body {
   color: #C8ACD6;
   font-size: 1rem;
   padding: 10px 20px;
+  margin: 5px 10px;
   background-color: #2E236C;
   border-radius: 20px;
   border-color:#C8ACD6;
   border-style: solid;
   border-width: 0.5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 2;
 }
 
 
@@ -146,12 +154,16 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-#blurb,
+
 #quote,
 #hobbies,
 #listMusic,
 #movies {
   margin: 10px 0;
+}
+
+#blurb{
+  margin: 10px, 20px;
 }
 
 /* Hobbies and Music List Styling */
@@ -208,6 +220,7 @@ td {
   text-align: center;
   font-size: 0.9rem;
   color: #C8ACD6;
+  border-radius: 20px;
 }
 
 tr:nth-child(even) {
@@ -253,16 +266,6 @@ tr:nth-child(even) {
   animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  #links a {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-    flex-direction: column;
-    /* Stack links vertically on small screens */
-    align-items: center;
-  }
-}
 
 #name {
   font-size: 2rem;
@@ -278,6 +281,7 @@ tr:nth-child(even) {
   height: relative;
   width: relative;
   max-width: 300px;
+  z-index: 1;
 }
 
 .image {
@@ -308,30 +312,44 @@ tr:nth-child(even) {
   opacity: 1;
 }
 
-#linksContainer {
+.links{
   display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  margin: 20px 0;
 }
 
-.linkImages {
-  display: flex;
-  /* Align links in a row */
-  gap: 15px;
-  flex: 1 1 auto;
-  /* Space between links */
-  flex-wrap: wrap;
-  /* Allow wrapping on smaller screens */
-  justify-content: center;
-  max-width: 18%; 
-}
-
-.linkOverlayContainer{
+.linkContainer{
   position: relative;
   height: relative;
   width: relative;
   max-width: 300px;
+  z-index: 1;
+}
+
+.linkIcon{
+  width: 60px;
+  height: 60px;
+}
+
+.linkText{
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.8);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .2s ease;
+  opacity: 0;
+  color: white;
+  font-size: 18px;
+  padding: 20px 30px 20px 0px;
+  text-align: center;
+}
+
+.linkContainer:hover .linkText{
+  opacity: 1;
 }
 
 .footer{
