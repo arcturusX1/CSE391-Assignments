@@ -216,7 +216,7 @@ tr:nth-child(even) {
   padding: 15px;
 }
 
-/* Container needed to position the overlay. Adjust the width as needed */
+/* Movie Table overlay + image container. Adjust the width as needed */
 .container {
   position: relative;
   height: relative;
@@ -230,7 +230,7 @@ tr:nth-child(even) {
   height: auto;
 }
 
-/* The overlay effect - lays on top of the container and over the image */
+/* Movie Table Overlay - lays on top of the container and over the image */
 .overlay {
   position: absolute;
   bottom: 0;
@@ -254,17 +254,26 @@ tr:nth-child(even) {
 
 #linksContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 20px 0;
 }
 
-#links {
+.linkImages {
   display: flex;
   /* Align links in a row */
   gap: 15px;
+  flex: 1 1 auto;
   /* Space between links */
   flex-wrap: wrap;
   /* Allow wrapping on smaller screens */
   justify-content: center;
+  max-width: 18%; 
+}
+
+.linkOverlayContainer{
+  position: relative;
+  height: relative;
+  width: relative;
+  max-width: 300px;
 }
