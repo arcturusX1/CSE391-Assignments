@@ -173,5 +173,18 @@
             </div>
         </div>
     </div>
+    <footer id="pageInfo" class="footer"></footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const footer = document.getElementById('pageInfo');
+        const lastModified = new Date(document.lastModified);
+        const formattedDate = lastModified.toLocaleDateString() + ' ' + lastModified.toLocaleTimeString();
+        
+        footer.innerHTML = `
+            <p>Page URL: ${window.location.href}</p>
+            <p>Last Modified: ${formattedDate}</p>
+        `;
+    });
+    </script>
 </body>
 </html>

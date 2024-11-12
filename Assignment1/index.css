@@ -277,3 +277,10 @@ tr:nth-child(even) {
   width: relative;
   max-width: 300px;
 }
+
+.footer{
+  margin: auto;
+  padding: 30px 30px;
+  text-align: center;
+  
+}
