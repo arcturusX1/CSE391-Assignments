@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="personalInfo">
+        <div class="sectionTitle">
+            <h3>Images</h3>
+        </div>
+        
+        <!-- images -->
+        <div class="container">
+            <img src="nacho.jpg" alt="Nacho The Cat" class="image">
+            <div class="overlay">Nacho</div>
+        </div>
+        
+        <div class="container">
+            <img src="nacho2.jpg" alt="Nacho loafing" class="image">
+            <div class="overlay">More Nacho</div>
+        </div>
+        
+        <div class="container">
+            <img src="nacho3.jpg" alt="Nacho in the sunset" class="image">
+            <div class="overlay">Sunset Nacho</div>
+        </div>
+        
+        <div class="container">
+            <img src="nacho4.jpg" alt="Comfy Nacho" class="image">
+            <div class="overlay">Comfy Nacho</div>
+        </div>
+    </div>
+
+    <footer id="pageInfo" class="footer"></footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const footer = document.getElementById('pageInfo');
+        const lastModified = new Date(document.lastModified);
+        const formattedDate = lastModified.toLocaleDateString() + ' ' + lastModified.toLocaleTimeString();
+        
+        footer.innerHTML = `
+            <p>Page URL: ${window.location.href}</p>
+            <p>Last Modified: ${formattedDate}</p>
+        `;
+    });
+    </script>
+</body>
+</html>

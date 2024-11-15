@@ -229,10 +229,11 @@ tr:nth-child(even) {
 
 /* Image Section */
 #images img {
-  width: 100px;
-  height: auto;
-  margin: 5px;
+  display:inline-block;
+  margin: 10px 20px 0px 20px ;
+  max-width: 150px;
   border-radius: 10px;
+  align-items: center;
   transition: transform 0.3s ease;
 }
 
@@ -312,6 +313,7 @@ tr:nth-child(even) {
   opacity: 1;
 }
 
+/* same as movie table, classes renamed */
 .links{
   display: flex;
   gap: 20px;
