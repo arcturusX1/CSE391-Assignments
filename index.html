@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="static/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <title>Assignment 1 - Yasir Mahbub</title>
 </head>
 <body>
@@ -17,22 +17,22 @@
         <!-- Name -->
         <h1 id="name">Yasir Mahbub</h1>
         <!-- Navbar -->
-        <div class="sectionTitle" id="linkTitle">
-            <h3>Links</h3>
-        </div>
     </header>
     <!-- nav has to be outside of header for position: sticky to work -->
     <nav id="navbar">
         <div id="navlinks">
-            <a href="#personalInfo">Personal Info</a>
-            <a href="#hobbiesTitle">Hobbies</a>
-            <a href="#quoteTitle">Favorite Quote</a>
-            <a href="#musicTitle">Favorite Bands</a>
-            <a href="#moviesTitle">Favorite Movies</a>
+            <a href="#infoGhost">Personal Info</a>
+            <a href="#hobbiesGhost">Hobbies</a>
+            <a href="#quoteGhost">Favorite Quote</a>
+            <a href="#musicGhost">Favorite Bands</a>
+            <a href="#moviesGhost">Favorite Movies</a>
+            <a href="#linksGhost">Links</a>
+            <a href="images.html">Images</a>
         </div>
     </nav>  
 
     <!-- personal info -->
+    <div class="ghostDiv" id="infoGhost"></div>
     <div class= "personalInfo" id="personalInfo">
         <div id="blurb">
             <p>
@@ -42,6 +42,7 @@
             </p>
         </div>
         <!-- quote -->
+        <div class="ghostDiv" id="quoteGhost"></div>
         <div class="sectionTitle" id="quoteTitle">
             <h3>Favorite quote</h3>
         </div>
@@ -50,6 +51,7 @@
                 <p id="quoteAuthor"> <i>- Bjarne Stroustrup, creator of C++</i></p>
         </div>
         <!-- hobbies -->
+        <div class="ghostDiv" id="hobbiesGhost"></div>
         <div class="sectionTitle" id="hobbiesTitle">
             <h3>Hobbies</h3>
         </div>
@@ -63,6 +65,7 @@
         </div>
         
         <!-- link to the table and list later -->
+        <div class="ghostDiv" id="musicGhost"></div>
         <div class="sectionTitle" id="musicTitle">
             <h3>Favorite bands</h3>
         </div>    
@@ -82,6 +85,7 @@
         </div>
             
         <!-- movies -->
+        <div class="ghostDiv" id="moviesGhost"></div>
         <div class="sectionTitle" id="moviesTitle">
             <h3>Favorite movies</h3>
         </div>
@@ -132,49 +136,55 @@
         </div>
         
         <!-- images -->
+        <div class="ghostDiv" id="imagesGhost"></div>
         <div class="sectionTitle" id="imagesTitle">
             <h3>Images</h3>
         </div>
         <div id="images">
                 <div id="image">
-                    <img src="IMG_20221019_224527127.jpg" alt="Nacho the cat" id="internal" text="Nacho!">
-                    <img src="" alt="" id="external">
+                    <img src="static/images/nacho.jpg" alt="Nacho the cat">
+                    <img src="static/images/nacho2.jpg" alt="">
+                    <img src="static/images/nacho3.jpg" alt="">
                 </div>
-            </div>
+        </div>
         <!-- links -->
+        <div class="ghostDiv" id="linksGhost"></div>
         <div id="linksTitle" class="sectionTitle" >
             <h3>Links</h3>
         </div>
         
-        <div id="navbar">
-            <div id="links">
-                <div class="linkImages" id="discordLink">
-                    <a href="https://discord.gg/8ukBMGew">
-                        <img src="discord-icon-svgrepo-com.svg" alt="Discord" class="image">
-                    </a>
-                    <div class="overlay">391 Discord</div>
+        <div class="links">
+
+            <div class="linkContainer">
+                <img src="static/images/discord-icon-svgrepo-com.svg" alt="" class="linkIcon">
+                <div class="linkText">
+                    <a href="https://discord.gg/8ukBMGew">Discord</a>
                 </div>
-                <div class="linkImages" id="githubLink">
-                    <a href="https://github.com/arcturusX1">
-                        <img src="github-mark-white.svg" alt="Github" class="image">
-                    </a>
-                    <div class="overlay">Github Profile</div>
+            </div>
+            
+            <div class="linkContainer">
+                <img src="static/images/bracuICON.svg" alt="" class="linkIcon">
+                
+                <div class="linkText">
+                    <a href="https://www.bracu.ac.bd">BRACU</a></div>
+            </div>
+            
+            <div class="linkContainer">
+                <img src="static/images/github-mark-white.svg" alt="" class="linkIcon">
+                <div class="linkText">
+                    <a href="https://github.com/arcturusX1">Github</a>
                 </div>
-                <div class="linkImages" id="bracuLink">
-                    <a href="https://www.bracu.ac.bd">
-                        <img src="bracu.svg" alt="BRACU" class="image">
-                    </a>
-                    <div class="overlay">BRACU Website</div>
-                </div>
-                <div class="linkImages" id="spoofyLink">
-                    <a href="https://open.spotify.com/user/wlw0x8ox66ckyjnu6glvp8vuv">
-                        <img src="Spotify_icon.svg" alt="Spotify" class="image">
-                    </a>
-                    <div class="overlay">BRACU Website</div>
+            </div>
+            
+            <div class="linkContainer">
+                <img src="static/images/Spotify_icon.svg" alt="" class="linkIcon">
+                <div class="linkText">
+                    <a href="https://open.spotify.com/user/wlw0x8ox66ckyjnu6glvp8vuv">Spotify</a>
                 </div>
             </div>
         </div>
     </div>
+    
     <footer id="pageInfo" class="footer"></footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
