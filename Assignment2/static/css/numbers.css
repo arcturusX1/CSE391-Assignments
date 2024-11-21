@@ -1,0 +1,24 @@
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* Both columns adjust to their content */
+    gap: 10px;
+    /* Space between grid items */
+    align-items: center;
+    /* Vertically aligns items in each row */
+}
+
+#label {
+    grid-column: 1;
+    /* Place label in the first column */
+}
+
+#input {
+    grid-column: 2;
+    /* Place input in the second column */
+}
+
+p {
+    margin: 0;
+    /* Remove default margin for cleaner layout */
+}
