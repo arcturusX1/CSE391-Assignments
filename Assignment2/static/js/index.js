@@ -49,17 +49,20 @@ const blueButton = document.getElementById("blueButton");
 const greenButton = document.getElementById("greenButton");
 const magentaButton = document.getElementById("magentaButton");
 
-function changeStyle(containerBorderColor, textContainerGradient) {
+function changeStyle(containerBorderColor, textContainerGradient, font) {
     // Change document background
  
-    // Change container background
+    // Change container background and border
     const container = document.querySelector('.container');
     container.style.background = `linear-gradient(${textContainerGradient})`;
-    container.style.border = `2px solid ${containerBorderColor}`;
+    container.style.borderWidth = '3px';
+    container.style.borderStyle = 'solid';
+    container.style.borderColor = containerBorderColor;
 
     // Change fortune text color for readability
     const fortuneText = document.querySelector('#fortune h3');
     fortuneText.style.color = 'white';
+    fortuneText.style.fontFamily = font;
 }
 
 function randomQuote(){
@@ -71,29 +74,33 @@ function randomQuote(){
 // Add event listeners for color change buttons
 redButton.addEventListener('click', () => 
     changeStyle(
-        '#yellow',           // container border
-        'to right, #740938, #CC2B52' // text container gradient
+        '#DE7C7D',           // container border
+        'to right, #740938, #CC2B52', // text container gradient
+        'Calibri'
     )
 );
 
 blueButton.addEventListener('click', () => 
     changeStyle(
-        'blue', 
-        'to right, #37B7C3, #088395'
+        '#629584', 
+        'to right, #37B7C3, #088395',
+        'Arial'
     )
 );
 
 greenButton.addEventListener('click', () => 
     changeStyle(
-        'green', 
-        'to right, #1A5319, #80AF81'
+        '#859F3D', 
+        'to right, #1A5319, #80AF81',
+        'Trebuchet MS'
     )
 );
 
 magentaButton.addEventListener('click', () => 
     changeStyle(
-        'magenta', 
-        'to right, #694F8E, #B692C2'
+        '#9694FF', 
+        'to right, #694F8E, #B692C2',
+        'Tahoma'
     )
 );
 

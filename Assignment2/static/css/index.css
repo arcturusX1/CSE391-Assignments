@@ -3,8 +3,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: solid;
-    border-style: solid;
+    border: 2px solid red;
     margin: 20px 15px 20px 15px;
     background-color: rgba(0,0,0,0.4);
     border-radius: 50px;
@@ -61,3 +60,13 @@
     background-color: #694F8E;
 }
 
+.container {
+    transition: background 0.5s ease, border-color 0.5s ease;
+    background-size: 200% 200%;
+    /* Makes gradient transition smoother */
+    background-position: 0% 50%;
+}
+
+#buttonContainer button:hover {
+    transform: scale(1.1);
+}
