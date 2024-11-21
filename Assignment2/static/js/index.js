@@ -43,18 +43,72 @@ const quotes = [
     "Happy News is on its way."
 ];
 
-
+// Select the buttons
 const redButton = document.getElementById("redButton");
 const blueButton = document.getElementById("blueButton");
 const greenButton = document.getElementById("greenButton");
 const magentaButton = document.getElementById("magentaButton");
 
+function changeStyle(containerBorderColor, docBg, buttonContainerBg, textContainerGradient) {
+    // Change document background
+    document.body.style.backgroundColor = docBg;
+    
+    // Change container background
+    const container = document.querySelector('.container');
+    container.style.background = `linear-gradient(${textContainerGradient})`;
+    container.style.border= containerBorderColor
+    
+    // Change button container background
+    const buttonContainer = document.querySelector('#buttonContainer');
+    buttonContainer.style.backgroundColor = buttonContainerBg;
+
+    // Change fortune text color for readability
+    const fortuneText = document.querySelector('#fortune h3');
+    fortuneText.style.color = 'white';
+}
+
 function randomQuote(){
     const fortuneDiv = document.getElementById("fortune").querySelector("h3");
-
     const randomIdx = Math.floor(Math.random() * quotes.length);
-
     fortuneDiv.innerHTML = quotes[randomIdx];
-};
+}
 
+// Add event listeners for color change buttons
+redButton.addEventListener('click', () => 
+    changeStyle(
+        'red',           // container background
+        '#ffcccc',       // document background
+        'rgba(255,0,0,0.2)', // button container background
+        'to right, #740938, #CC2B52' // text container gradient
+    )
+);
+
+blueButton.addEventListener('click', () => 
+    changeStyle(
+        'blue', 
+        '#ccccff', 
+        'rgba(0,0,255,0.2)', 
+        'to right, #37B7C3, #088395'
+    )
+);
+
+greenButton.addEventListener('click', () => 
+    changeStyle(
+        'green', 
+        '#ccffcc', 
+        'rgba(0,255,0,0.2)', 
+        'to right, #66ff66, #33ff33'
+    )
+);
+
+magentaButton.addEventListener('click', () => 
+    changeStyle(
+        'magenta', 
+        '#ffccff', 
+        'rgba(255,0,255,0.2)', 
+        'to right, #ff66ff, #ff33ff'
+    )
+);
+
+// When the page loads, display a random quote
 window.onload = randomQuote;
