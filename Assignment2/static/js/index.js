@@ -49,18 +49,13 @@ const blueButton = document.getElementById("blueButton");
 const greenButton = document.getElementById("greenButton");
 const magentaButton = document.getElementById("magentaButton");
 
-function changeStyle(containerBorderColor, docBg, buttonContainerBg, textContainerGradient) {
+function changeStyle(containerBorderColor, textContainerGradient) {
     // Change document background
-    document.body.style.backgroundColor = docBg;
-    
+ 
     // Change container background
     const container = document.querySelector('.container');
     container.style.background = `linear-gradient(${textContainerGradient})`;
-    container.style.border= containerBorderColor
-    
-    // Change button container background
-    const buttonContainer = document.querySelector('#buttonContainer');
-    buttonContainer.style.backgroundColor = buttonContainerBg;
+    container.style.border = `2px solid ${containerBorderColor}`;
 
     // Change fortune text color for readability
     const fortuneText = document.querySelector('#fortune h3');
@@ -76,9 +71,7 @@ function randomQuote(){
 // Add event listeners for color change buttons
 redButton.addEventListener('click', () => 
     changeStyle(
-        'red',           // container background
-        '#ffcccc',       // document background
-        'rgba(255,0,0,0.2)', // button container background
+        '#yellow',           // container border
         'to right, #740938, #CC2B52' // text container gradient
     )
 );
@@ -86,8 +79,6 @@ redButton.addEventListener('click', () =>
 blueButton.addEventListener('click', () => 
     changeStyle(
         'blue', 
-        '#ccccff', 
-        'rgba(0,0,255,0.2)', 
         'to right, #37B7C3, #088395'
     )
 );
@@ -95,18 +86,14 @@ blueButton.addEventListener('click', () =>
 greenButton.addEventListener('click', () => 
     changeStyle(
         'green', 
-        '#ccffcc', 
-        'rgba(0,255,0,0.2)', 
-        'to right, #66ff66, #33ff33'
+        'to right, #1A5319, #80AF81'
     )
 );
 
 magentaButton.addEventListener('click', () => 
     changeStyle(
         'magenta', 
-        '#ffccff', 
-        'rgba(255,0,255,0.2)', 
-        'to right, #ff66ff, #ff33ff'
+        'to right, #694F8E, #B692C2'
     )
 );
 
