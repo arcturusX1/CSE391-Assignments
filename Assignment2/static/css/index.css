@@ -77,3 +77,9 @@ body{
 #buttonContainer button:hover {
     transform: scale(1.1);
 }
+
+#links{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
