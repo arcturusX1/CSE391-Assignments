@@ -9,7 +9,7 @@ function capitalize() {
     const currentText = inputField.value;
     inputField.value = currentText === currentText.toUpperCase()
         ? currentText.toLowerCase()
-        : currentText.toUpperCase(); //ternary op
+        : currentText.toUpperCase(); //ternary op -> condition? true:false
 }
 
 function sortText() {
