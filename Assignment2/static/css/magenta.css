@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: blue;
+    border: magenta;
     border-style: solid;
 }
 

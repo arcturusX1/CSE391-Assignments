@@ -48,13 +48,29 @@ const redButton = document.getElementById("redButton");
 const blueButton = document.getElementById("blueButton");
 const greenButton = document.getElementById("greenButton");
 const magentaButton = document.getElementById("magentaButton");
+const styleSheet = document.getElementById("stylesheet")
 
 function randomQuote(){
     const fortuneDiv = document.getElementById("fortune").querySelector("h3");
-
     const randomIdx = Math.floor(Math.random() * quotes.length);
-
     fortuneDiv.innerHTML = quotes[randomIdx];
 };
+
+function changeStyle(sheet){
+    styleSheet.href = (sheet)
+}
+
+redButton.addEventListener('click', function() {
+    changeStyle('red.css'); // Switch to Style 1
+});
+// blueButton.addEventListener('click', function() {
+//     changeStyle('blue.css'); // Switch to Style 1
+// });
+// greenButton.addEventListener('click', function() {
+//     changeStyle('green.css'); // Switch to Style 1
+// });
+// magentaButton.addEventListener('click', function() {
+//     changeStyle('magenta.css'); // Switch to Style 1
+// });
 
 window.onload = randomQuote;
