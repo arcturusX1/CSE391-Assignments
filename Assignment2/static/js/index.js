@@ -43,34 +43,66 @@ const quotes = [
     "Happy News is on its way."
 ];
 
-
+// Select the buttons
 const redButton = document.getElementById("redButton");
 const blueButton = document.getElementById("blueButton");
 const greenButton = document.getElementById("greenButton");
 const magentaButton = document.getElementById("magentaButton");
-const styleSheet = document.getElementById("stylesheet")
+
+function changeStyle(containerBorderColor, textContainerGradient, font) {
+    // Change document background
+ 
+    // Change container background and border
+    const container = document.querySelector('.container');
+    container.style.background = `linear-gradient(${textContainerGradient})`;
+    container.style.borderWidth = '3px';
+    container.style.borderStyle = 'solid';
+    container.style.borderColor = containerBorderColor;
+
+    // Change fortune text color for readability
+    const fortuneText = document.querySelector('#fortune h3');
+    fortuneText.style.color = 'white';
+    fortuneText.style.fontFamily = font;
+}
 
 function randomQuote(){
     const fortuneDiv = document.getElementById("fortune").querySelector("h3");
     const randomIdx = Math.floor(Math.random() * quotes.length);
     fortuneDiv.innerHTML = quotes[randomIdx];
-};
-
-function changeStyle(sheet){
-    styleSheet.href = (sheet)
 }
 
-redButton.addEventListener('click', function() {
-    changeStyle('red.css'); // Switch to Style 1
-});
-// blueButton.addEventListener('click', function() {
-//     changeStyle('blue.css'); // Switch to Style 1
-// });
-// greenButton.addEventListener('click', function() {
-//     changeStyle('green.css'); // Switch to Style 1
-// });
-// magentaButton.addEventListener('click', function() {
-//     changeStyle('magenta.css'); // Switch to Style 1
-// });
+// Add event listeners for color change buttons
+redButton.addEventListener('click', () => 
+    changeStyle(
+        '#DE7C7D',           // container border
+        'to right, #740938, #CC2B52', // text container gradient
+        'Calibri'
+    )
+);
 
+blueButton.addEventListener('click', () => 
+    changeStyle(
+        '#629584', 
+        'to right, #37B7C3, #088395',
+        'Arial'
+    )
+);
+
+greenButton.addEventListener('click', () => 
+    changeStyle(
+        '#859F3D', 
+        'to right, #1A5319, #80AF81',
+        'Trebuchet MS'
+    )
+);
+
+magentaButton.addEventListener('click', () => 
+    changeStyle(
+        '#9694FF', 
+        'to right, #694F8E, #B692C2',
+        'Tahoma'
+    )
+);
+
+// When the page loads, display a random quote
 window.onload = randomQuote;

@@ -1,0 +1,38 @@
+body {
+    background-color: grey;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    margin: 20px 0;
+    width: 100%;
+    /* Full width of the container */
+    height: 200px;
+    /* Adjust height to fit multiple inputs */
+    font-size: 1.2em;
+    /* Increase font size for better readability */
+    padding: 10px;
+    /* Add padding for better usability */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width/height */
+    border: 5px dashed lightgreen;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+button {
+    font-size: 1.3em;
+}
