@@ -1,7 +1,76 @@
-.container{
+/* General reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F4;
+    color: #333;
+    height: 100%;
     display: flex;
-    border: 2px solid black;
-    justify-content: space-evenly;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
+}
+
+/* Center container styling */
+.container {
+    background-color: #088395;
+    color: #FFF;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Input and Select Styling */
+input[type="text"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #AF1740;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Button Styling */
+button {
+    background-color: #508D4E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #694F8E;
+}
+
+/* Result Text Styling */
+#result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Links section */
+#links {
+    margin-top: 20px;
+}
+
+#links a {
+    text-decoration: none;
+    color: #088395;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+#links a:hover {
+    color: #AF1740;
 }

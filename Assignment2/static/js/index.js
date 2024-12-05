@@ -54,7 +54,7 @@ function changeStyle(containerBorderColor, textContainerGradient, font) {
     // Change container background and border
     const container = document.querySelector('.container');
     container.style.background = `linear-gradient(${textContainerGradient})`;
-    container.style.borderWidth = '3px';
+    container.style.borderWidth = '8px';
     container.style.borderStyle = 'solid';
     container.style.borderColor = containerBorderColor;
 
