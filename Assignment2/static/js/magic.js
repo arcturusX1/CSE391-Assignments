@@ -9,7 +9,7 @@ function capitalize() {
     const currentText = inputField.value;
     inputField.value = currentText === currentText.toUpperCase()
         ? currentText.toLowerCase()
-        : currentText.toUpperCase(); //ternary op
+        : currentText.toUpperCase(); //ternary op -> condition? true:false
 }
 
 function sortText() {
@@ -34,7 +34,8 @@ function stripBlank() {
 
 function addNumbers() {
     const lines = inputField.value.split('\n');
-    const numberedLines = lines.map((line, index) => `${index + 1}. ${line.replace(/^\d+\.\s*/, '')}`);
+    console.log(lines)
+    const numberedLines = lines.map((line, index) => `${index + 1}. ${line}`);
     inputField.value = numberedLines.join('\n');
 }
 

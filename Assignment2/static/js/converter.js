@@ -6,6 +6,7 @@ const convertType = document.getElementById("convertType");
 button.addEventListener("click", () => {
     // string to float
     const value = parseFloat(valueInput.value);
+    //parseFloat ignores non-numerical values, so it'll be empty if it's text
     
     // value not empty check
     if (isNaN(value)) {

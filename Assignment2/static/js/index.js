@@ -50,7 +50,6 @@ const greenButton = document.getElementById("greenButton");
 const magentaButton = document.getElementById("magentaButton");
 
 function changeStyle(containerBorderColor, textContainerGradient, font) {
-    // Change document background
  
     // Change container background and border
     const container = document.querySelector('.container');
